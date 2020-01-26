@@ -1,0 +1,48 @@
+<!--
+  Author:  Kevin Kot
+  Class:   Software Engineering 
+  Project: Lab 2 / RegExp Tester
+  Description: Question 4 RegExp Tester applicaiton
+-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Regexp Test</title>
+    <script language="javascript">
+        function Compare() { //Code used to compare the two input values.
+            var uput1 = document.getElementById("str").value;
+            var uput2 = document.getElementById("regex").value;
+            //returns true if uput1 (id=str) contains the values from uput2 (id=regex), otherwise it returns false.
+            if (uput1.includes(uput2)) {
+                document.getElementById("verify").value = "True"
+            }
+            else {
+                document.getElementById("verify").value = "False"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>
+            Kevin Kot RegExp Tester
+        </h1>
+        <form>
+            String: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="str"><br><br>
+            
+            RegExp: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="regex"><br><br>
+            
+            Verification: &nbsp;&nbsp;&nbsp;
+            <input type="text" id="verify" disabled><br><br>
+
+            <button type="button" onclick="Compare()">Compare Inputs</button><br><br>
+        </form>
+    </center>
+</body>
+
+</html>
