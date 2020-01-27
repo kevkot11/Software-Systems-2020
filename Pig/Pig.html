@@ -1,0 +1,49 @@
+<!--
+  Author:  Kevin Kot
+  Class:   Software Engineering 
+  Project: Pig
+  Description: Sprint 2 Dice Rolling project called Pig. User rolls dice and as long as they don't roll a 1, they can continue rolling to accumulate points. 
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pig</title>
+    <link rel="stylesheet" href="Pig.css">    
+    <script src="Pig.js"></script>
+</head>
+
+<!-- Loads the StartGame Function from Pig.js -->
+<body onload="StartGame()">
+    <h1>The Game of Pig</h1>
+    <p><b>How to play:</b> The game is simple. You roll the dice and you will <br>
+        land on a number between 1 and 6. You can roll the dice as many <br>
+        times as you want. You accumulate points that which you can  <br>
+        cash in by ending your turn, which can be seen in the bank. <br>
+        This is where the kicker comes in. <u>If you roll a 1, the bank is reset to 0 <br>
+        and you lose your turn; thus, getting no points.</u> <br>
+        First to 100 points wins. Pressing "New Game" Resets all the scores. GLHF.
+    </p>
+
+    <!-- The various buttons, paragraphs and input boxes on the screen -->
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Dice: <input type="text" id="uDice" class="diceTextBox" disabled><br><br>
+
+     <input type="radio" id="plt1" value="turn1" disabled> 
+     Player1 Score: <input type="text" id="p1" disabled><br><br>
+
+     <input type="radio" id="plt2" value="turn2" disabled>
+     Player2 Score: <input type="text" id="p2" disabled><br><br>
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Bank <input type="text" id="bank" disabled><br><br>
+
+    <button type="button" onclick="RollDice()" id="diceroll" autofocus>Roll Dice</button><br><br>
+    <button type="button" onclick="EndTurn()" id="endturn">End Turn</button><br><br>
+    <button type="button" onclick="NewGame()">New Game</button><br><br>
+
+    <p id="winner"></p> <!-- Used to declare the winner when 100 points is reached -->
+</body>
+
+</html>
