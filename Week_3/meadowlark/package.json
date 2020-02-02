@@ -1,0 +1,19 @@
+{
+  "name": "meadowlark_tut",
+  "version": "1.0.0",
+  "description": "Brown Chapter 3 tutorial",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "meadowlark"
+  },
+  "keywords": [
+    "tutorial;",
+    "brown;"
+  ],
+  "author": "kevin kot",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0"
+  }
+}
